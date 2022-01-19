@@ -87,6 +87,55 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* General Styles */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Lora", serif;
+  font-size: 1em;
+  text-align: left;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  color: #4e5497;
+  text-decoration: none;
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.875em;
+}
+
+h3,
+h4 {
+  font-family: "Raleway", sans-serif;
+  margin: 20px 0;
+  font-size: 1.125em;
+}
+
+p {
+  font-size: 0.875em;
+  line-height: 1.285;
+}
+
+img {
+}
+
+figure {
+}
+
+address {
+  font-style: normal;
+}
+
 .content-wrapper {
   width: 90%;
   margin: 50px 0;

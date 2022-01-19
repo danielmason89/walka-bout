@@ -96,7 +96,7 @@ html {
 body {
   font-family: "Lora", serif;
   font-size: 1em;
-  color: #180d29;
+  color: #d2d1d4;
   text-align: left;
 }
 
@@ -106,7 +106,7 @@ ol {
 }
 
 a {
-  color: #180d29;
+  color: #d2d1d4;
   text-decoration: none;
 }
 
@@ -137,6 +137,7 @@ img {
 }
 
 figure {
+  margin: 0;
 }
 
 address {
@@ -160,6 +161,14 @@ footer {
 }
 
 /*  Header styles */
+
+header figure {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 
 header {
   padding: 15px 0;
@@ -248,6 +257,7 @@ footer .copyright {
   flex-flow: row wrap;
   background: url("../img/jake-melara-30679-unsplash.jpg") center no-repeat #333;
   background-size: cover;
+  min-height: 500px;
 }
 
 .hero-area h1 {
@@ -299,6 +309,9 @@ input[type="button"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url("../img/rawpixel-800820-unsplash1.jpg") center;
+  background-size: cover;
+  flex-flow: row wrap;
 }
 
 .features h2 {
@@ -327,7 +340,6 @@ input[type="button"] {
   background-color: #2a423a;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: row wrap;
 }
 

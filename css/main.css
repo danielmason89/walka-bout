@@ -96,7 +96,7 @@ html {
 body {
   font-family: "Lora", serif;
   font-size: 1em;
-  color: #d2d1d4;
+  color: #d3d2d1;
   text-align: left;
 }
 
@@ -130,8 +130,9 @@ h4 {
 }
 
 p {
-  font-size: 0.875em;
-  line-height: 1.285;
+  font-size: 0.9em;
+  line-height: 1.285em;
+  font-weight: normal;
 }
 
 img {
@@ -155,7 +156,7 @@ address {
 
 header,
 footer {
-  background-color: #333836;
+  background-color: #747b77;
   display: flex;
   justify-content: center;
   align-items: center;

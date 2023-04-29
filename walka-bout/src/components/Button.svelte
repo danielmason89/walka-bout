@@ -19,8 +19,18 @@
   }
 
   .primary {
-    background-color: #ff3e00;
-    color: white;
+    width: 70%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    margin-top: 20px;
+    background-color: #2da37c;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 1.125em;
+    color: #e2e3ed;
+    border: none;
+    text-align: center;
+    border-radius: 1rem;
   }
 
   .secondary {
@@ -34,14 +44,14 @@
   }
 
   .primary.inverse {
-    background-color: white;
-    color: #ff3e00;
-    border: 2px solid white;
+    background-color: #e2e3ed;
+    color: #2da37c;
+    border: 2px solid #e2e3ed;
   }
 
   .secondary.inverse {
-    background-color: #333;
-    color: antiquewhite;
-    border: 2px solid #333;
+    background-color: #2da37c;
+    color: #e2e3ed;
+    border: 2px solid #2da37c;
   }
 </style>

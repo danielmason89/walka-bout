@@ -1,4 +1,5 @@
 <script>
+  import Button from "./Button.svelte";
   import { createEventDispatcher } from "svelte";
   let dispatch = createEventDispatcher();
   let name = "";
@@ -33,12 +34,12 @@
         emailAddress,
       };
       console.log("form is valid", user);
-      dispatch("submitForm", user);
+      dispatch("formSubmitted", user);
     }
   };
 </script>
 
-<form on:submit|preventDefault={handleSubmit}>
+<form method="post" on:submit|preventDefault={handleSubmit}>
   <label for="name" />
   <input
     type="text"
@@ -61,7 +62,7 @@
     required
   />
   <div class="error">{errors.emailAddress}</div>
-  <button> Download Itinerary </button>
+  <Button>Download Itinerary</Button>
 </form>
 
 <style>
@@ -83,26 +84,11 @@
   input[type="text"],
   input[type="email"] {
     box-sizing: border-box;
-    width: 100%;
+    width: 75%;
     color: #2a423a;
     font-style: italic;
     padding: 1em;
     margin: 1em 0em;
-  }
-
-  button {
-    width: 75%;
-    text-align: center;
-    padding: 1rem 1.5rem;
-    margin-top: 20px;
-    background-color: #2da37c;
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    font-size: 1.125em;
-    color: #e2e3ed;
-    border: none;
-    text-align: center;
-    border-radius: 1rem;
   }
 
   .error {

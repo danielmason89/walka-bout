@@ -8,7 +8,7 @@
 <main>
   <section class="hero-area">
     <div class="content-wrapper">
-      <h1>Retreat from the desk and return refreshed.</h1>
+      <h1>Retreat from the desk to return refreshed.</h1>
     </div>
   </section>
   <aside>
@@ -22,7 +22,7 @@
       </div>
       <div class="form">
         <h3>Find out more</h3>
-        <Form on:submitForm={submittedForm} />
+        <Form on:formSubmitted={submittedForm} />
       </div>
     </div>
   </aside>
@@ -201,7 +201,8 @@
   /* Hero Area */
 
   .hero-area {
-    min-height: 600px;
+    height: 100vh;
+    min-height: 100svh;
   }
 
   .hero-area h1 {
@@ -222,6 +223,10 @@
   aside .content-wrapper .form {
     width: 40%;
     margin: 0;
+  }
+
+  .form h3 {
+    text-align: center;
   }
 
   /* Features */
@@ -283,10 +288,6 @@
   @media only screen and (min-width: 1200px) {
     /*Desktop styles here */
 
-    header {
-      padding: 15px 0;
-    }
-
     .content-wrapper {
       max-width: 960px;
     }
@@ -299,15 +300,8 @@
       font-size: 2.25em;
     }
 
-    h3,
-    h4 {
+    h3 {
       font-size: 1.875em;
-    }
-
-    a {
-      display: flex;
-      align-items: flex-start;
-      padding: 0 1rem;
     }
 
     p {
@@ -350,10 +344,6 @@
 
     .reviews article div {
       width: 42%;
-    }
-
-    footer h4 {
-      font-size: 1.875em;
     }
   }
 

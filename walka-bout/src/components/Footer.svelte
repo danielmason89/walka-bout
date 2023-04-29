@@ -48,6 +48,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
 
   footer h4 {
@@ -108,7 +111,6 @@
   @media only screen and (min-width: 768px) {
     footer .content-wrapper {
       width: 65%;
-      margin: 100px 0;
     }
 
     .footer-content {

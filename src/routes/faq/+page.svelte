@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Faq from "../../components/Faq.svelte";
+	import Faq from '../../components/Faq.svelte';
 </script>
 
-<Faq/>
+<Faq />

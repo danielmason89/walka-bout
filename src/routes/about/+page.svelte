@@ -1,7 +1,5 @@
 <script lang="ts">
- import About from "../../components/About.svelte";
+	import About from '../../components/About.svelte';
 </script>
 
-<About/>
-
-
+<About />

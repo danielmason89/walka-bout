@@ -12,8 +12,9 @@
 		"ignoreDeprecations": "5.0",
 		"target": "es5", // Specify ECMAScript target version
 		"module": "es2015", // Specify module code generation
-		"outDir": "./dist" // Output directory for the compiled .js files
-	},
+		"outDir": "./dist", // Output directory for the compiled .js files
+    "moduleResolution": "node"
+  },
 	"include": [
 		"src/**/*.ts" // Make sure this line is correctly pointing to your TypeScript source files
 	],

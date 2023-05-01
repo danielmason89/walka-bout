@@ -37,6 +37,21 @@
 		color: #333836;
 	}
 
+	img {
+		object-fit: cover;
+		height: 7rem;
+		transition: 0.15s;
+		border-radius: 10%;
+		margin: 0.5rem 0rem;
+	}
+
+	img:hover {
+		background-color: #333836;
+		transition: 0.5s ease-in-out;
+		border-radius: 10%;
+		opacity: 1;
+	}
+
 	@media screen and (max-width: 720px) {
 		header .content-wrapper {
 			flex-flow: row wrap;
@@ -54,7 +69,16 @@
 
 		img {
 			object-fit: cover;
-			height: 7rem;
+			height: 6rem;
+			transition: 0.15s;
+		}
+
+		img:hover {
+			background-color: #333836;
+			margin: 0.5rem;
+			transition: 0.5s ease-in-out;
+			border-radius: 10%;
+			opacity: 1;
 		}
 	}
 
@@ -86,7 +110,6 @@
 		justify-content: space-around;
 		width: 100%;
 		list-style: none;
-		margin-bottom: 0.5rem;
 	}
 
 	header nav ul li {
@@ -105,7 +128,7 @@
 		/*Desktop styles here */
 
 		header {
-			padding: 15px 0;
+			padding: 2.5px 0;
 			padding-bottom: 0px;
 		}
 

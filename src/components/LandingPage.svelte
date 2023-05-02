@@ -87,7 +87,7 @@
 			<article>
 				<figure>
 					<img
-						src="./img/omar-lopez-296944-unsplash.jpg"
+						src="/img/omar-lopez-296944-unsplash.jpg"
 						alt="Group of happy people outdoors on a walka-bout"
 					/>
 				</figure>
@@ -111,7 +111,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-flow: row wrap;
-		background: url('../img/jake-melara-30679-unsplash.jpg') center no-repeat #333;
+		background: url('/img/jake-melara-30679-unsplash.jpg') center no-repeat;
 		background-size: cover;
 		min-height: 500px;
 		padding-bottom: 15rem;
@@ -130,7 +130,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: url('../img/rawpixel-800820-unsplash1.jpg') center;
+		background: url('/img/rawpixel-800820-unsplash1.jpg') center;
 		background-size: cover;
 		flex-flow: row wrap;
 	}

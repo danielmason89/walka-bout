@@ -128,12 +128,6 @@
 		width: 80%;
 	}
 
-	/* .contact-content {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-	} */
-
 	.contact-content h4 {
 		font-size: 1.5em;
 	}
@@ -150,9 +144,9 @@ About Page
 	.contact-section .content-wrapper h2 {
 		width: 100%;
 		height: auto;
-		font-size: 3em;
+		font-size: 2.5rem;
 		line-height: 1.25;
-		padding-bottom: 1rem;
+		padding-bottom: 1.5rem;
 	}
 
 	.contact-content h4 {

@@ -118,7 +118,6 @@
 	}
 
 	.hero-area h1 {
-		font-size: 2.25em;
 		font-family: 'Raleway', Helvetica, Arial, sans-serif;
 		font-weight: 500;
 		line-height: 1.2;

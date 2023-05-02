@@ -62,7 +62,7 @@
 	}
 
 	.faq .content-wrapper {
-		padding: 50px 0 0 0;
+		padding: 8rem 0 0 0;
 		padding-bottom: 0px;
 		display: flex;
 		justify-content: center;
@@ -75,13 +75,13 @@
 	}
 
 	.faq h1 {
-		padding-bottom: 0.5rem;
-		line-height: 1;
+		padding-bottom: 2.5rem;
+		line-height: 1.12;
 		width: 100%;
 	}
 
 	.faq-content {
-		padding-bottom: 1.75rem;
+		padding-bottom: 1rem;
 	}
 
 	.faq-content {
@@ -95,6 +95,7 @@
 
 	.faq h4 {
 		font-weight: 900;
+    margin-top: 0rem;
 	}
 
 	@media print,

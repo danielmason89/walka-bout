@@ -62,7 +62,7 @@
 	}
 
 	.faq .content-wrapper {
-		padding: 8rem 0 0 0;
+		padding: 6rem 0 0 0;
 		padding-bottom: 0px;
 		display: flex;
 		justify-content: center;
@@ -75,7 +75,7 @@
 	}
 
 	.faq h1 {
-		padding-bottom: 2.5rem;
+		padding-bottom: 3.5rem;
 		line-height: 1.12;
 		width: 100%;
 	}

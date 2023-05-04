@@ -1,6 +1,9 @@
 <script>
 	import Button from './Button.svelte';
 	import { createEventDispatcher } from 'svelte';
+  // @ts-ignore
+  import { enhance } from "$app/forms";
+
 	let dispatch = createEventDispatcher();
 	let name = '';
 	let emailAddress = '';
@@ -39,7 +42,7 @@
 	};
 </script>
 
-<form method="post" on:submit|preventDefault={handleSubmit}>
+<form use:enhance method="POST" on:submit|preventDefault={handleSubmit}>
 	<label for="name" />
 	<input
 		type="text"
@@ -56,7 +59,7 @@
 		type="email"
 		id="email"
 		aria-label="Email Address"
-		name="emailAddress"
+		name="email"
 		placeholder="Email Address"
 		bind:value={emailAddress}
 		required

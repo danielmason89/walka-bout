@@ -3,6 +3,7 @@ node_modules
 /build
 /.svelte-kit
 /package
+src/lib/firebase/firebase-secrets.server.json
 .env
 .env.*
 !.env.example

@@ -1,5 +1,9 @@
 <script lang="ts">
-	import About from '../../components/About.svelte';
+  import About from '$lib/components/About.svelte';
 </script>
 
 <About />
+
+<svelte:head>
+  <title>Walka-bout | About</title>
+</svelte:head>

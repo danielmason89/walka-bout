@@ -1,5 +1,20 @@
 <script>
 	let hoverColor = '#333836';
+  import authStore from "$lib/stores/auth.store.js"
+  import { logout } from "$lib/firebase/auth.client"
+  import { goto } from "$app/navigation";
+  import messagesStores from "$lib/stores/messages.stores";
+  import Alert from './Alert.svelte';
+
+  async function onLogout() {
+    try {
+      await logout();
+      goto("/");
+    } catch (e) {
+      console.log(e);
+      messagesStores.showError();
+  }
+}
 </script>
 
 <header>
@@ -12,12 +27,24 @@
 		<div class="header-divider" />
 		<nav>
 			<ul>
-				<li><a data-sveltekit-preload-data href="/" title="Home">Home</a></li>
-				<li><a data-sveltekit-preload-data href="/faq" title="FAQ">Faq</a></li>
+        {#if $authStore.isLoggedIn}
+          <li><a data-sveltekit-preload-data href="/" aria-current="page" title="Home">Home</a></li>
+          <li><a data-sveltekit-preload-data href="/dashboard" title="Dashboard">Dashboard</a></li>
+          <li><a data-sveltekit-preload-data="tap" on:click={onLogout} href="/" title="Logout">Logout</a></li>
+				  <li><a data-sveltekit-preload-data href="/faq" title="FAQ">Faq</a></li>
+				  <li><a data-sveltekit-preload-data href="/about" title="About">About</a></li>
+        {:else}
+        <!-- Not Logged In -->
+				<li><a data-sveltekit-preload-data href="/" aria-current="page" title="Home">Home</a></li>
+				<li><a data-sveltekit-preload-data="tap" href="/signup" title="Signup">Signup</a></li>
+        <li><a data-sveltekit-preload-data="tap" href="/login" title="Login">Login</a></li>
+        <li><a data-sveltekit-preload-data href="/faq" title="FAQ">Faq</a></li>
 				<li><a data-sveltekit-preload-data href="/about" title="About">About</a></li>
+        {/if}
 			</ul>
 		</nav>
 	</div>
+  <Alert />
 </header>
 
 <style>
@@ -28,6 +55,10 @@
 		align-items: center;
 		flex-flow: row wrap;
 	}
+
+  nav li a {
+    text-decoration: none;
+  }
 
 	.content-wrapper {
 		width: 80vw;
@@ -65,6 +96,7 @@
 		a {
 			text-align: center;
 			font-size: 1rem;
+      text-decoration: none;
 		}
 
 		img {

@@ -10,10 +10,16 @@
 		"sourceMap": true,
 		"strict": true,
 		"ignoreDeprecations": "5.0",
-		"target": "es5", // Specify ECMAScript target version
+		"target": "es6", // Specify ECMAScript target version
 		"module": "es2015", // Specify module code generation
 		"outDir": "./dist", // Output directory for the compiled .js files
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "$lib":["./src/lib"],
+      "$lib/*":["./src/lib/*"],
+      "$app/*": ["./src/*"]
+    }
   },
 	"include": [
 		"src/**/*.ts" // Make sure this line is correctly pointing to your TypeScript source files

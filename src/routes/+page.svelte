@@ -1,5 +1,9 @@
 <script lang="ts">
-	import LandingPage from '../components/LandingPage.svelte';
+	import LandingPage from '$lib/components/LandingPage.svelte';
 </script>
 
 <LandingPage />
+
+<svelte:head>
+  <title>Walka-bout | Home</title>
+</svelte:head>

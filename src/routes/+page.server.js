@@ -1,8 +1,12 @@
-import { db } from '$lib/firebase/firebase.server.js';
+import { getEvents } from '../lib/firebase/database.server.js';
 
-export async function load() {
-	const count = await db.collection('users').count().get();
+export async function load({ locals, url }) {
+	const page = url.searchParams.get('page') || 1;
+	const { events, next, previous } = await getEvents(locals?.user?.id, +page);
 	return {
-		count: count.data().count
+		events,
+		next,
+		previous,
+		page
 	};
 }

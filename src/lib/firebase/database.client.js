@@ -4,7 +4,6 @@ import { db } from './firebase.client';
 export async function setUser(userId) {
 	const users = collection(db, 'users');
 	await setDoc(doc(users, userId), {
-		user_id: userId,
-		createdAt: new Date()
+		user_id: userId
 	});
 }

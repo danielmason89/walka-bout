@@ -1,6 +1,8 @@
 <script>
 	import authStore from '$lib/stores/auth.store.js';
 	import messagesStore from '$lib/stores/messages.stores.js';
+  import { createEventDispatcher } from 'svelte';
+  const dispatch = createEventDispatcher();
   export let event;
   let submitting = false;
 
@@ -12,9 +14,11 @@
       submitting = true;
       const response = await fetch(`/like/${event.id}`);
       event = await response.json();
+      dispatch('toggle_like', {id: event.id});
     } catch (e) {
       messagesStore.showError();
     }
+
     submitting = false;
   }
 </script>

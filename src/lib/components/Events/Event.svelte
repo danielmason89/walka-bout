@@ -1,19 +1,24 @@
 <script>
+  import { goto } from '$app/navigation';
   import Like from './Like.svelte';
   export let event;
+
+  function goToEventPage() {
+    goto(`/events/${event.id}`)
+  }
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="container">
-  <div class="text-container">
+  <div on:click={goToEventPage} class="text-container">
       <h2>Title: {event.title}</h2>
       <h2>Organizer: {event.organizer}</h2>
       <h2>Location: {event.location}</h2>
       <p>
           {event.description}
-          {event.date} - {event.time}
+          {event.date} / {event.time}
       </p>
-     <Like {event} />
+     <Like {event} on:toggle_like />
   </div>
 </div>
 

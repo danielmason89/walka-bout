@@ -1,9 +1,8 @@
-<script lang="ts">
-	import Dashboard from '$lib/components/Dashboard.svelte';
+<script>
+  import Event from "$lib/components/Events/Event.svelte";
+  export let data;
 </script>
 
-<Dashboard />
-
-<svelte:head>
-  <title>Walka-bout | Dashboard</title>
-</svelte:head>
+{#each data.events as event (event.id)}
+<Event {event} />
+{/each}

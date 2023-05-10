@@ -1,11 +1,10 @@
 <script>
-	let hoverColor = '#333836';
-  import authStore from "$lib/stores/auth.store.js"
+	// let hoverColor = '#333836';
   import { logout } from "$lib/firebase/auth.client"
   import { goto } from "$app/navigation";
   import messagesStores from "$lib/stores/messages.stores";
   import Alert from './Alert.svelte';
-
+  export let isLoggedIn;
   async function onLogout() {
     try {
       await logout();
@@ -27,7 +26,7 @@
 		<div class="header-divider" />
 		<nav>
 			<ul>
-        {#if $authStore.isLoggedIn}
+        {#if isLoggedIn}
           <li><a data-sveltekit-preload-data href="/" aria-current="page" title="Home">Home</a></li>
           <li><a data-sveltekit-preload-data href="/dashboard" title="Dashboard">Dashboard</a></li>
           <li><a data-sveltekit-preload-data href="/add" title="Add Event">Add Event</a></li>

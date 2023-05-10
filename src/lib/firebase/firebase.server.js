@@ -1,10 +1,9 @@
 import admin from 'firebase-admin';
-import serviceAccount from '$lib/firebase/firebase-secrets.server.json';
+import { GOOGLE_SERVICE_ACCOUNT } from '$env/static/private';
 
 if (admin.apps.length === 0) {
 	admin.initializeApp({
-		credential: admin.credential.cert(serviceAccount),
-		databaseURL: 'https://sveltekit-firebase-auth-1-default-rtdb.firebaseio.com'
+		credential: admin.credential.cert(JSON.parse(GOOGLE_SERVICE_ACCOUNT))
 	});
 }
 

@@ -1,5 +1,5 @@
 import { error, json } from '@sveltejs/kit';
-import { getEvent, toggleEventLike } from '../../../lib/firebase/database.server.js';
+import { getEvent, toggleEventLike } from '$lib/firebase/database.server.js';
 
 export async function GET({ params, locals }) {
 	if (!locals.user) {

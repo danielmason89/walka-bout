@@ -13,7 +13,7 @@ export async function addEvent(event, userId) {
 		date: event.date,
 		time: event.time,
 		organizer: event.organizer,
-		user_Id: userId,
+		user_id: userId,
 		created_at: admin.firestore.Timestamp.now().seconds
 	});
 	//update the doc in the firestore database
@@ -35,6 +35,39 @@ export async function getEvent(id, userId = null) {
 		const likedEvent = user?.eventIds?.includes(id) || false;
 		return { id: eventRef.id, ...eventRef.data(), likedEvent };
 	}
+}
+
+export async function getEventsForUser(userId) {
+	const user = await getUser(userId);
+	const events = await db
+		.collection('events')
+		.orderBy('created_at', 'desc')
+		.where('user_id', '==', userId)
+		.get();
+
+	return events.docs.map((d) => {
+		const likedEvent = user?.eventIds?.includes(d.id) || false;
+
+		return { id: d.id, ...d.data(), likedEvent };
+	});
+}
+
+export async function getLikedEvents(userId) {
+	const user = await getUser(userId);
+	const eventIds = user?.eventIds || [];
+
+	if (eventIds.length === 0) {
+		return [];
+	}
+
+	const events = await db
+		.collection('events')
+		.where(admin.firestore.FieldPath.documentId(), 'in', eventIds)
+		.get();
+
+	return events.docs.map((d) => {
+		return { id: d.id, ...d.data(), likedEvent: true };
+	});
 }
 
 export async function getEvents(userId, page = 1) {
@@ -72,20 +105,20 @@ export async function toggleEventLike(eventId, userId) {
 	// unlike the event
 	if (userData.eventIds && userData.eventIds.includes(eventId)) {
 		await userDoc.update({
-			eventIds: firestore.FieldValue.arrayRemove(eventId)
+			eventIds: admin.firestore.FieldValue.arrayRemove(eventId)
 		});
 		await eventDoc.update({
-			likes: firestore.FieldValue.increment(-1)
+			likes: admin.firestore.FieldValue.increment(-1)
 		});
 	}
 	// like the event
 	else {
 		await userDoc.update({
-			eventIds: firestore.FieldValue.arrayUnion(eventId)
+			eventIds: admin.firestore.FieldValue.arrayUnion(eventId)
 		});
 		await eventDoc.update({
-			likes: firestore.FieldValue.increment(1)
+			likes: admin.firestore.FieldValue.increment(1)
 		});
 	}
-	return await getEvent(eventId);
+	return await getEvent(eventId, userId);
 }

@@ -1,11 +1,10 @@
 <script>
-	let hoverColor = '#333836';
-  import authStore from "$lib/stores/auth.store.js"
+	// let hoverColor = '#333836';
   import { logout } from "$lib/firebase/auth.client"
   import { goto } from "$app/navigation";
   import messagesStores from "$lib/stores/messages.stores";
   import Alert from './Alert.svelte';
-
+  export let isLoggedIn;
   async function onLogout() {
     try {
       await logout();
@@ -27,9 +26,10 @@
 		<div class="header-divider" />
 		<nav>
 			<ul>
-        {#if $authStore.isLoggedIn}
+        {#if isLoggedIn}
           <li><a data-sveltekit-preload-data href="/" aria-current="page" title="Home">Home</a></li>
           <li><a data-sveltekit-preload-data href="/dashboard" title="Dashboard">Dashboard</a></li>
+          <li><a data-sveltekit-preload-data href="/add" title="Add Event">Add Event</a></li>
           <li><a data-sveltekit-preload-data="tap" on:click={onLogout} href="/" title="Logout">Logout</a></li>
 				  <li><a data-sveltekit-preload-data href="/faq" title="FAQ">Faq</a></li>
 				  <li><a data-sveltekit-preload-data href="/about" title="About">About</a></li>
@@ -49,6 +49,10 @@
 
 <style>
 	/*  Header styles */
+header {
+  z-index: 10;
+}
+
 	header figure {
 		display: flex;
 		justify-content: center;
@@ -58,6 +62,7 @@
 
   nav li a {
     text-decoration: none;
+    font-weight: 300;
   }
 
 	.content-wrapper {
@@ -83,7 +88,7 @@
 		opacity: 1;
 	}
 
-	@media screen and (max-width: 720px) {
+	@media screen and (max-width: 1350px) {
 		header .content-wrapper {
 			flex-flow: row wrap;
 		}
@@ -134,7 +139,7 @@
 		justify-content: space-around;
 		align-items: center;
 		flex-flow: row wrap;
-		width: 60%;
+		width: 100%;
 	}
 
 	header nav ul {
@@ -142,10 +147,6 @@
 		justify-content: space-around;
 		width: 100%;
 		list-style: none;
-	}
-
-	header nav ul li {
-		font-size: 1.125em;
 	}
 
 	a,
@@ -174,4 +175,36 @@
 			padding: 0 1rem;
 		}
 	}
+
+  @media only screen and (max-width: 640px) {
+    a {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media only screen and (max-width: 540px) {
+    a {
+      font-size: 0.5rem;
+    }
+  }
+  @media only screen and (max-width: 382px) {
+    a {
+      font-size: 0.45rem;
+    }
+  }
+  @media only screen and (max-width: 363px) {
+    a {
+      font-size: 0.4rem;
+    }
+  }
+  @media only screen and (max-width: 331px) {
+    a {
+      font-size: 0.334rem;
+    }
+  }
+  @media only screen and (max-width: 300px) {
+    a {
+      font-size: 0.301rem;
+    }
+  }
 </style>

@@ -87,8 +87,6 @@ h1 {
 }
 
 .reset-btn {
-    display: block;
-    width: 100%;
     padding: 0.5rem;
     font-size: 16px;
     line-height: 1.5;

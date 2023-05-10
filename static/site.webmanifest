@@ -3,7 +3,7 @@
 	"name": "",
 	"icons": [
 		{
-			"src": "icon.png",
+			"src": "./favicon.png",
 			"type": "image/png",
 			"sizes": "192x192"
 		}

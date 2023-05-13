@@ -14,7 +14,6 @@ export async function handle({ event, resolve }) {
 	}
 	const user = event.locals?.user;
 	const url = event.url;
-
 	if (url.pathname !== '/') {
 		if (!user && protectedRoutes.find((u) => url.pathname.indexOf(u) > -1)) {
 			throw redirect(302, `/login?redirect=${url.pathname}`);

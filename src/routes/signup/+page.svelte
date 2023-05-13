@@ -14,7 +14,7 @@
       if (!email || !password) {
         messagesStores.showError("Please enter a valid email and password.");
         return;
-      } 
+      }
       if (password.length < 6) {
         messagesStores.showError("Password must be at least 6 characters or more.");
         return;
@@ -44,18 +44,15 @@
 </div>
 
 <style>
+
 h1 {
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 0.5rem;
-  
 }
 
   .sign-container {
-    padding-top: 2rem;
-    padding-bottom: 2rem; 
-    height: 100vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

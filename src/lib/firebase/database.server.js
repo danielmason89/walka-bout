@@ -14,7 +14,8 @@ export async function addEvent(event, userId) {
 		time: event.time,
 		organizer: event.organizer,
 		user_id: userId,
-		created_at: admin.firestore.Timestamp.now().seconds
+		created_at: admin.firestore.Timestamp.now().seconds,
+		likes: 0
 	});
 	//update the doc in the firestore database
 

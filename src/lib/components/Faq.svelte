@@ -47,8 +47,6 @@
 
 	.content-wrapper {
 		width: 90%;
-		margin: 50px 0;
-		margin-bottom: 0px;
 	}
 
 	.faq {
@@ -57,15 +55,13 @@
 		justify-content: center;
 		align-items: center;
 		flex-flow: row wrap;
-		height: 100vh;
-		min-height: 100svh;
+		height: 85vh;
+		height: 85svh;
 	}
 
 	.faq .content-wrapper {
-		padding: 6rem 0 0 0;
 		padding-bottom: 0px;
 		display: flex;
-		justify-content: center;
 		align-items: center;
 		flex-flow: column wrap;
 	}

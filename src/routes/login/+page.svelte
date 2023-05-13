@@ -44,9 +44,7 @@
 
 
 .login-container {
-    padding-top: 2rem;
-    padding-bottom: 2rem; 
-    height: 100vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,7 +73,6 @@ h1 {
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 0.5rem;
 }
 
 .divider {

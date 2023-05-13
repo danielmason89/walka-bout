@@ -51,6 +51,8 @@
 	/*  Header styles */
 header {
   z-index: 10;
+  position: sticky;
+  top: 0;
 }
 
 	header figure {
@@ -62,11 +64,10 @@ header {
 
   nav li a {
     text-decoration: none;
-    font-weight: 300;
   }
 
 	.content-wrapper {
-		width: 80vw;
+		width: 85%;
 	}
 
 	ul a:hover {
@@ -119,10 +120,6 @@ header {
 		}
 	}
 
-	header {
-		position: fixed;
-		width: 100%;
-	}
 
 	header .content-wrapper {
 		display: flex;
@@ -159,11 +156,6 @@ header {
 
 	@media only screen and (min-width: 1200px) {
 		/*Desktop styles here */
-
-		header {
-			padding: 2.5px 0;
-			padding-bottom: 0px;
-		}
 
 		.content-wrapper {
 			width: 90vw;

@@ -1,5 +1,5 @@
 export function load({ locals }) {
 	return {
-		idLoggedIn: locals.user !== null
+		isLoggedIn: locals.user !== null
 	};
 }

@@ -4,7 +4,7 @@
   export let event;
 
   function goToEventPage() {
-    goto(`/events/${event.id}`)
+    goto(`/event/${event.id}`)
   }
 </script>
 

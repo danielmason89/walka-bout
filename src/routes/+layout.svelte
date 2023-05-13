@@ -19,11 +19,9 @@ const unsub = eventNotifyStore.subscribe((event) => {
     return;
   }
 
-  if ($authStore.userId !== event.user_id) {
     notifyEvent = event;
     console.log('notifyEvent', notifyEvent);
-    return;
-  }
+
 });
 
 onDestroy(() => {

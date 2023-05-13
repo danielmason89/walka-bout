@@ -107,8 +107,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		flex-flow: column wrap;
-		height: 100vh;
+		flex-flow: row wrap;
+    padding-top: 2rem;
 	}
 
 	.content-wrapper {

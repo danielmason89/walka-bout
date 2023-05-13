@@ -71,8 +71,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-flow: row wrap;
-		height: 100vh;
-		padding-top: 5.5rem;
+		height: 85vh;
 	}
 
 	.content-wrapper {
@@ -116,7 +115,7 @@
 	}
 
 	.mission-content p {
-		margin: 0rem 3rem;
+		margin: 0rem 0.5rem;
 		margin-bottom: 1em;
 	}
 

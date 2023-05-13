@@ -15,7 +15,7 @@
   <EventForm {form} />
   {/if}
   </div>
-  
+
 </div>
 
 <style>
@@ -26,8 +26,7 @@
    align-items: center;
    flex-flow: row wrap;
    background-color: #527158;
-   height: 92vh;
-   padding-top: 5rem;
+   height: 85vh;
   }
 
   .add-event-row{
@@ -49,7 +48,6 @@
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
-  padding-top: 3rem;
 }
 
 .divider {

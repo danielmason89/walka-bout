@@ -22,7 +22,7 @@
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.20",
 		"eslint": "^8.28.0",
-		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-prettier": "^8.10.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"firebase": "^9.21.0",
 		"firebase-admin": "^11.8.0",

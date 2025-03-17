@@ -23,13 +23,11 @@
 <div align="center">
 
 # Walka-bout Resort 
-## Welcome to Walka-bout Resort's Repo
 
 ### 🌴 About the Project 🌴
 
   <div align="center">
-    <p></p>
-    <p>A Video Games Platform for Avid Gamers</p>
+    <p>Welcome to Walka-bout Resort's Repo</p>
     <p>A hiking-vacation company website for corporate getaways and their employees to book their next vacation.  
     </div>
     <br />
@@ -44,7 +42,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://walka-bout.vercel.app/)
 
-[product-screenshot]: https://media.licdn.com/dms/image/v2/D4E2DAQEDCsnJwm4ZNg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1718855069526?e=1742187600&v=beta&t=MiXrctEdmtWF6BqZDb17haW02c2DCQWXJZP98J04eYY
+[product-screenshot]: https://media.licdn.com/dms/image/v2/D4E2DAQGW5BHyJdz5aA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1718854660072?e=1742788800&v=beta&t=ypPocluJM4hDvaC5eou0sQpI4gVQBSeArsmwoAEGVUU
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -72,7 +70,6 @@
 
 - [![TypeScript][TypeScript]][TypeScript-url]
 - [![Vite][Vite]][Vite-url]
-- [![Axios][Axios]][Axios-url]
 - [![Cors][Cors]][Cors-url]
 - [![Cookie-Parser][Cookie-Parser]][Cookie-Parser-url]
 - [![tsx][tsx]][tsx-url]
@@ -122,7 +119,7 @@
    npm run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+5. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 <br/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

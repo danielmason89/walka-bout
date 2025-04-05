@@ -42,7 +42,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://walka-bout.vercel.app/)
 
-[product-screenshot]: https://media.licdn.com/dms/image/v2/D4E2DAQGW5BHyJdz5aA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1718854660072?e=1742788800&v=beta&t=ypPocluJM4hDvaC5eou0sQpI4gVQBSeArsmwoAEGVUU
+[product-screenshot]: https://github.com/danielmason89/walka-bout/blob/0df4e57a16e3fa31bd2ab46e4eddb9e7ea732cea/walka-bout.jpg
 
 <!-- TABLE OF CONTENTS -->
 <details>
